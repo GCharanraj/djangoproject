@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET">{% csrf_token %}
+<pre>
+ENTER YOUR NUMBER:
+
+<input type="number" name="num" placeholder="enter your number" required>
+
+<button>submit</button>
+</pre>
+    </form>
+    {% if res %}
+       <h1>given number is armstrong number</h1>
+    {% else %}
+       <h1>not a armstrong number</h1>
+    {% endif %}
+</body>
+</html>
